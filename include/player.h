@@ -6,6 +6,7 @@
 #define ABILITY_PHASE 4
 
 typedef struct {
+    int frame_width, frame_height;
     float dx, dy;
     cpBody *playerBody;
     cpShape *playerShape;
@@ -13,7 +14,7 @@ typedef struct {
     int ability;
 } player_t;
 
-void init_player(player_t*, cpSpace);
+void init_player(player_t*, char*, cpSpace*);
 void free_player(player_t*);
 
 void update_player(player_t*);
