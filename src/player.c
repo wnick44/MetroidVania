@@ -5,4 +5,9 @@
 void init_player(player_t* player, char* filename,cpSpace space){
     player->frame_width = 64;
     player->frame_height = 64;
+    
+    player->dx = 0;
+    player->dy = 0;
+
+    
 }

@@ -2,8 +2,7 @@ typedef enum{
     FADE_IDLE,
     FADE_OUT,
     FADE_IN,
-    FADE_LOADING,
-    FADE_IN
+    FADE_LOADING
 } fade_phase_e;
 
 typedef struct{
