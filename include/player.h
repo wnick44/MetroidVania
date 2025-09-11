@@ -5,6 +5,8 @@
 #define ABILITY_DASH 2
 #define ABILITY_PHASE 4
 
+#define FOLDER_STRUCT "assets/sprites/player"
+
 typedef struct {
     int frame_width, frame_height;
     float dx, dy;

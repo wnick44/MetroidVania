@@ -22,18 +22,28 @@ int fade_update(fade_transition_t* transition, float dt){
         case FADE_IN:
             transition->t += dt * transition->speed;
             if(transition->t>=1.f){
+                transition->t=1.f;
                 
             }
+            return 1;
             break;
         case FADE_OUT:
             transition->t -= dt * transition->speed;
             if(transition->t<=0.f){
-
+                transition->t = 0.f;
+                transition->phase = FADE_LOADING;
             }
+            return 2;
             break;
         case FADE_LOADING:
             transition->phase=FADE_IN;
             transition->t=1.f;
-
+            break;
+        default: break;
     }
+    return 0;
+}
+
+void fade_draw(SDL_Renderer* renderer, fade_transition_t* transition, int , int){
+
 }
